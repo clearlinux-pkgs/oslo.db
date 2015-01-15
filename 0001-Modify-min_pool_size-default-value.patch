@@ -1,0 +1,26 @@
+From c0ce85e3a1f100c651701bad8f423c56c26c9014 Mon Sep 17 00:00:00 2001
+From: Victor Morales <victor.morales@intel.com>
+Date: Thu, 30 Jul 2015 09:23:38 -0500
+Subject: [PATCH] Modify min_pool_size default value
+
+Signed-off-by: Victor Morales <victor.morales@intel.com>
+---
+ oslo_db/options.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/oslo_db/options.py b/oslo_db/options.py
+index 42de948..1fcd17e 100644
+--- a/oslo_db/options.py
++++ b/oslo_db/options.py
+@@ -60,7 +60,7 @@ database_opts = [
+                                                   group='sql')],
+                help='Timeout before idle SQL connections are reaped.'),
+     cfg.IntOpt('min_pool_size',
+-               default=1,
++               default=20,
+                deprecated_opts=[cfg.DeprecatedOpt('sql_min_pool_size',
+                                                   group='DEFAULT'),
+                                 cfg.DeprecatedOpt('sql_min_pool_size',
+-- 
+2.1.0
+
