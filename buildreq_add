@@ -60,3 +60,7 @@ MySQL-python
 psycopg2
 funcsigs
 oslo.db
+debtcollector-python
+wrapt-python
+monotonic-python
+oslo.context
