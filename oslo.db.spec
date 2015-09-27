@@ -4,7 +4,7 @@
 #
 Name     : oslo.db
 Version  : 2.6.0
-Release  : 23
+Release  : 24
 URL      : http://tarballs.openstack.org/oslo.db/oslo.db-2.6.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.db/oslo.db-2.6.0.tar.gz
 Summary  : Oslo Database library
@@ -93,6 +93,11 @@ oslo.db
 %package python
 Summary: python components for the oslo.db package.
 Group: Default
+Requires: iso8601-python
+Requires: oslo.utils-python
+Requires: oslo.i18n-python
+Requires: Babel-python
+Requires: six-python
 
 %description python
 python components for the oslo.db package.
