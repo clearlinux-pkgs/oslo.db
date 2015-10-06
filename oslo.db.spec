@@ -4,7 +4,7 @@
 #
 Name     : oslo.db
 Version  : 2.6.0
-Release  : 25
+Release  : 26
 URL      : http://tarballs.openstack.org/oslo.db/oslo.db-2.6.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.db/oslo.db-2.6.0.tar.gz
 Summary  : Oslo Database library
