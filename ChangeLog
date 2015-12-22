@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+4.2.0
+-----
+
+* Fix comparison of Variant and other type in compare_type
+* Updated from global requirements
+* Updated from global requirements
+* Don't trace DB errors when we're retrying
+* Updated from global requirements
+* Remove iso8601 in requirements.txt
+* Trival: Remove 'MANIFEST.in'
+
 4.1.0
 -----
 
