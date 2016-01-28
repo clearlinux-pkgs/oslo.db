@@ -1,6 +1,21 @@
 CHANGES
 =======
 
+4.3.1
+-----
+
+* Imported Translations from Zanata
+* Updated from global requirements
+* Fix tests to work under both pymsysql 0.6.2 and 0.7.x
+* Don't log non-db error in retry wrapper
+
+4.3.0
+-----
+
+* Updated from global requirements
+* Put py34 first in the env order of tox
+* Updated from global requirements
+
 4.2.0
 -----
 
