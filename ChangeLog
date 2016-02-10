@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+4.4.0
+-----
+
+* exceptions: provide .message attribute for Py3K compatibility
+* Updated from global requirements
+* InvalidSortKey constructor change breaks Heat unittests
+* exception: fix DBInvalidUnicodeParameter error message
+* exceptions: enhance InvalidSortKey to carry the invalid key
+* exception: fix InvalidSortKey message
+* Update translation setup
+* Updated from global requirements
+* Add exc_filter for invalid Unicode string
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
 4.3.1
 -----
 
