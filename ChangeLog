@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+4.5.0
+-----
+
+* Updated from global requirements
+* stop making a copy of options discovered by config generator
+
 4.4.0
 -----
 
