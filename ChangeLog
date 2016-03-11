@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+4.6.0
+-----
+
+* Increase the default max_overflow value
+* Updated from global requirements
+* add reno for release notes management
+* Updated from global requirements
+* Updated from global requirements
+* Clarify the types for retry_interval args of wrap_db_retry
+
 4.5.0
 -----
 
