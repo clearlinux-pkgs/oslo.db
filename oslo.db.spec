@@ -4,7 +4,7 @@
 #
 Name     : oslo.db
 Version  : 4.7.0
-Release  : 37
+Release  : 38
 URL      : http://tarballs.openstack.org/oslo.db/oslo.db-4.7.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.db/oslo.db-4.7.0.tar.gz
 Summary  : Oslo Database library
@@ -53,6 +53,7 @@ BuildRequires : oslotest-python
 BuildRequires : pbr
 BuildRequires : pep8
 BuildRequires : pip
+BuildRequires : pluggy
 BuildRequires : posix_ipc
 BuildRequires : psycopg2
 BuildRequires : py-python
@@ -78,8 +79,10 @@ BuildRequires : testresources
 BuildRequires : testscenarios
 BuildRequires : testtools
 BuildRequires : testtools-python
+BuildRequires : tox
 BuildRequires : traceback2-python
 BuildRequires : unittest2-python
+BuildRequires : virtualenv
 BuildRequires : wrapt-python
 Patch1: 0001-Modify-min_pool_size-default-value.patch
 
@@ -125,7 +128,7 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-py.test-2.7 --verbose py2
+PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
