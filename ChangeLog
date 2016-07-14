@@ -1,11 +1,58 @@
 CHANGES
 =======
 
-4.7.0
+4.8.0
 -----
 
 * Updated from global requirements
-* Update .gitreview for stable/mitaka
+* Add support for LONGTEXT, MEDIUMTEXT to JsonEncodedType
+* Deprecate config option sqlite_db for removal
+* Catch empty value DBDuplicate errors
+* Updated from global requirements
+* api: use sane default in wrap_db_retry()
+* Imported Translations from Zanata
+* exc_filters: catch and translate non existent table on drop
+* exception: make message mandatory in DbMigrationError and deprecates it
+* Make it possible to use enginefacade decorators with class methods
+* Updated from global requirements
+* tests: fix order of assertEqual in exc_filter
+* exc_filters: catch and translate non existent constraint on drop
+* Replace tempest-lib dependency with os-testr
+* Imported Translations from Zanata
+* Fix typos in comments and docstring
+* Updated from global requirements
+* Updated from global requirements
+* Fix typo: 'olso' to 'oslo'
+* Repair boolean CHECK constraint detection
+* api: do not log a traceback if error is not expected
+* Fix imports in doc
+* Allow testing of MySQL and PostgreSQL scenario locally
+* Add support for custom JSON serializer
+* api: always enable retry_on_request
+* Remove oslo-incubator related stuff
+* Updated from global requirements
+* Updated from global requirements
+* Remove direct dependency on babel
+* Imported Translations from Zanata
+* Add debtcollector to requirements
+* Fix unit tests failures, when psycopg2 is not installed
+* Fix server_default comparison for BigInteger
+* Remove unused sqlite_fk in _init_connection_args call
+* Updated from global requirements
+* Correct docstring
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Raise DbMigrationError for invalid version
+* Add new filter for DBDataError exception
+* Fix spelling mistake
+* Let enginefacade._TransactionContextManager look for context
+* Remove  sqlalchemy < 1.0.0 compatible layer
+* Update reno for stable/mitaka
+* Updated from global requirements
+* Add tests for float interval values in wrap_db_retry()
 
 4.6.0
 -----
@@ -289,7 +336,7 @@ CHANGES
 1.4.1
 -----
 
-* Restore the check_foreign_keys(
+* Restore the check_foreign_keys() method
 * Ensure DBConnectionError is raised on failed revalidate
 
 1.4.0
@@ -465,7 +512,7 @@ CHANGES
 0.2.0
 -----
 
-* Fix kwarg passed twice error in EngineFacade.from_config(
+* Fix kwarg passed twice error in EngineFacade.from_config()
 
 0.1.0
 -----
