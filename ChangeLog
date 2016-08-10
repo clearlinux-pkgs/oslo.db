@@ -1,11 +1,32 @@
 CHANGES
 =======
 
+4.10.0
+------
+
+* Capture DatabaseError for deadlock check
+
+4.9.0
+-----
+
+* Updated from global requirements
+* Memoize sys.exc_info() before attempting a savepoint rollback
+* Updated from global requirements
+* Consolidate pifpaf commands into variables
+* Updated from global requirements
+* Updated from global requirements
+* Fixed unit tests running on Windows
+* Remove discover from setup.cfg
+* Add dispose_pool() method to enginefacade context, factory
+
 4.8.0
 -----
 
 * Updated from global requirements
+* Set a min and max on the connection_debug option
+* Set max pool size default to 5
 * Add support for LONGTEXT, MEDIUMTEXT to JsonEncodedType
+* tox: add py35 envs for convenience
 * Deprecate config option sqlite_db for removal
 * Catch empty value DBDuplicate errors
 * Updated from global requirements
