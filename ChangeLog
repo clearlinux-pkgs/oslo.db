@@ -1,10 +1,49 @@
 CHANGES
 =======
 
+4.13.3
+------
+
+* Add additional caution looking for table, info
+
+4.13.2
+------
+
+* utils: fix get_unique_keys() when model has no table attached to it
+
+4.13.1
+------
+
+* Correctly detect incomplete sort_keys passed to paginate_query
+* Fix DBReferenceError and DBNonExistentTable with new PyMySQL version
+* Update .gitreview for stable/newton
+
+4.13.0
+------
+
+* Updated from global requirements
+
+4.12.0
+------
+
+* Updated from global requirements
+* Link enginefacade to test database provisioning
+* Display full reason for backend not available
+* Updated from global requirements
+* Deprecate argument sqlite_db in method set_defaults
+
+4.11.0
+------
+
+* Updated from global requirements
+* Add test helpers to enginefacade
+* Add logging_name to enginefacade config
+
 4.10.0
 ------
 
 * Capture DatabaseError for deadlock check
+* Add a hook to process newly created engines
 
 4.9.0
 -----
@@ -12,6 +51,7 @@ CHANGES
 * Updated from global requirements
 * Memoize sys.exc_info() before attempting a savepoint rollback
 * Updated from global requirements
+* Fix parameters of assertEqual are misplaced
 * Consolidate pifpaf commands into variables
 * Updated from global requirements
 * Updated from global requirements
@@ -29,6 +69,7 @@ CHANGES
 * tox: add py35 envs for convenience
 * Deprecate config option sqlite_db for removal
 * Catch empty value DBDuplicate errors
+* release notes: mention changes in wrap_db_retry()
 * Updated from global requirements
 * api: use sane default in wrap_db_retry()
 * Imported Translations from Zanata
