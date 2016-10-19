@@ -1,22 +1,22 @@
 CHANGES
 =======
 
-4.13.3
+4.14.0
 ------
 
+* standardize release note page ordering
+* Add a specific exception for 'unknown database' errors
+* Enable release notes translation
+* Updated from global requirements
+* Add DBDataError for "Data too long"
+* Updated from global requirements
+* Updated from global requirements
 * Add additional caution looking for table, info
-
-4.13.2
-------
-
 * utils: fix get_unique_keys() when model has no table attached to it
-
-4.13.1
-------
-
+* Update reno for stable/newton
+* Updated from global requirements
 * Correctly detect incomplete sort_keys passed to paginate_query
 * Fix DBReferenceError and DBNonExistentTable with new PyMySQL version
-* Update .gitreview for stable/newton
 
 4.13.0
 ------
