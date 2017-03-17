@@ -1,6 +1,67 @@
 CHANGES
 =======
 
+4.18.0
+------
+
+* Updated from global requirements
+* Update test requirement
+* Establish flush() for "sub" facade contexts
+* Remove unused logging import
+* Support facade arguments, unstarted facade for patch_engine()
+* Repair unused rollback_reader_sessions parameter
+* Updated from global requirements
+* Prepare for using standard python tests
+* Explain paginate_query doesn't provide parameter offset
+* Updated from global requirements
+* Update reno for stable/ocata
+* Coerce booleans to integer values in paginate_query
+* Remove references to Python 3.4
+
+4.17.0
+------
+
+* Modify word "whetever" to "whether"
+* Updated from global requirements
+* Add Constraints support
+* Support packet sequence wrong error
+* docs: mention that it's possible to use Connection directly
+* exc_filters: fix deadlock detection for percona xtradb cluster
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Fix marker checking when value is None
+* Strip prefix `migrate_` in parameter `migrate_engine`
+
+4.16.0
+------
+
+* migration: don't assume the mixin use provision
+* Check if an index on given columns exists
+
+4.15.0
+------
+
+* Ensure provision_new_database is True by default
+* Don't run LegacyBaseClass provision test for unavailable database
+* SoftDeleteMixin: allow for None values
+* SoftDeleteMixin: coerce deleted param to be an integer
+* Show team and repo badges on README
+* Support MariaDB error 1927
+* Break optimize_db_test_loader into package and module level
+* Adjust SAVEPOINT cause test for SQLA 1.1
+* Updated from global requirements
+* Restore provisioning of DBs in legacy test base
+* Updated from global requirements
+* Updated from global requirements
+* Enhanced fixtures for enginefacade-based provisioning
+* utils: deprecate InsertFromSelect properly
+* Using new style assertions instead of  old style assertions
+* Updated from global requirements
+* Fix exc_filters for mysql-python
+* Updated from global requirements
+* Change assertTrue(isinstance()) by optimal assert
+* OpenStack typo
+* Changed the home-page link
+
 4.14.0
 ------
 
@@ -101,6 +162,7 @@ CHANGES
 * Fix server_default comparison for BigInteger
 * Remove unused sqlite_fk in _init_connection_args call
 * Updated from global requirements
+* Fix db_version checking for sqlalchemy-migrate
 * Correct docstring
 * Updated from global requirements
 * Updated from global requirements
