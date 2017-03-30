@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+4.19.0
+------
+
+* Updated from global requirements
+* Remove deprecated config option sqlite_db
+* Imported Translations from Zanata
+* Updated from global requirements
+
 4.18.0
 ------
 
