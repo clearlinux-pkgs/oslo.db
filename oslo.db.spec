@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xEB6CCA1483FA74EC (infra-root@openstack.org)
 #
 Name     : oslo.db
-Version  : 4.20.0
-Release  : 53
-URL      : http://tarballs.openstack.org/oslo.db/oslo.db-4.20.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.db/oslo.db-4.20.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.db/oslo.db-4.20.0.tar.gz.asc
+Version  : 4.21.0
+Release  : 54
+URL      : https://tarballs.openstack.org/oslo.db/oslo.db-4.21.0.tar.gz
+Source0  : https://tarballs.openstack.org/oslo.db/oslo.db-4.21.0.tar.gz
+Source99 : https://tarballs.openstack.org/oslo.db/oslo.db-4.21.0.tar.gz.asc
 Summary  : Oslo Database library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -67,17 +67,17 @@ python components for the oslo.db package.
 
 
 %prep
-%setup -q -n oslo.db-4.20.0
+%setup -q -n oslo.db-4.21.0
 %patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1491338190
+export SOURCE_DATE_EPOCH=1492457787
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1491338190
+export SOURCE_DATE_EPOCH=1492457787
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
