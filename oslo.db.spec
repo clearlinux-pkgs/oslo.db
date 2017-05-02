@@ -6,7 +6,7 @@
 #
 Name     : oslo.db
 Version  : 4.21.0
-Release  : 54
+Release  : 55
 URL      : https://tarballs.openstack.org/oslo.db/oslo.db-4.21.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.db/oslo.db-4.21.0.tar.gz
 Source99 : https://tarballs.openstack.org/oslo.db/oslo.db-4.21.0.tar.gz.asc
