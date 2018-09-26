@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+4.41.1
+------
+
+* Fix FOREIGN KEY messages for MariaDB 10.2, 10.3
+* Imported Translations from Zanata
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+* Switch to stestr
+
 4.40.0
 ------
 
