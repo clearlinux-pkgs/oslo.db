@@ -6,46 +6,36 @@
 #
 Name     : oslo.db
 Version  : 4.41.1
-Release  : 58
+Release  : 59
 URL      : https://tarballs.openstack.org/oslo.db/oslo.db-4.41.1.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.db/oslo.db-4.41.1.tar.gz
 Source99 : https://tarballs.openstack.org/oslo.db/oslo.db-4.41.1.tar.gz.asc
 Summary  : Oslo Database library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: oslo.db-python3
-Requires: oslo.db-license
-Requires: oslo.db-python
+Requires: oslo.db-license = %{version}-%{release}
+Requires: oslo.db-python = %{version}-%{release}
+Requires: oslo.db-python3 = %{version}-%{release}
 Requires: PyMySQL
 Requires: SQLAlchemy
 Requires: Sphinx
 Requires: alembic
-Requires: bandit
-Requires: coverage
 Requires: debtcollector
 Requires: doc8
-Requires: eventlet
 Requires: fixtures
-Requires: hacking
 Requires: openstackdocstheme
-Requires: os-testr
 Requires: oslo.config
-Requires: oslo.context
 Requires: oslo.i18n
 Requires: oslo.utils
 Requires: oslotest
 Requires: pbr
 Requires: psycopg2
-Requires: python-mock
-Requires: python-subunit
 Requires: reno
 Requires: six
 Requires: sqlalchemy-migrate
-Requires: stestr
 Requires: stevedore
 Requires: testresources
 Requires: testscenarios
-Requires: testtools
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 Patch1: 0001-Modify-min_pool_size-default-value.patch
@@ -89,13 +79,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537928690
+export SOURCE_DATE_EPOCH=1541270509
 python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/oslo.db
-cp LICENSE %{buildroot}/usr/share/doc/oslo.db/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/oslo.db
+cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.db/LICENSE
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -106,7 +96,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/doc/oslo.db/LICENSE
+/usr/share/package-licenses/oslo.db/LICENSE
 
 %files python
 %defattr(-,root,root,-)
