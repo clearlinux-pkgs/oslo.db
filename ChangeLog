@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+4.42.0
+------
+
+* Add "is\_started" flag to enginefacade
+* Move warnings to their own module
+* Clean up .gitignore references to personal tools
+* Always build universal wheels
+* Don't quote {posargs} in tox.ini
+
 4.41.1
 ------
 
