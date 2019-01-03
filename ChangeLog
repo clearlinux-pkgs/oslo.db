@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+4.43.0
+------
+
+* Remove convert\_unicode flag
+* Update mailinglist from dev to discuss
+
 4.42.0
 ------
 
