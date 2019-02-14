@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.db
-Version  : 4.43.0
-Release  : 62
-URL      : https://tarballs.openstack.org/oslo.db/oslo.db-4.43.0.tar.gz
-Source0  : https://tarballs.openstack.org/oslo.db/oslo.db-4.43.0.tar.gz
-Source99 : https://tarballs.openstack.org/oslo.db/oslo.db-4.43.0.tar.gz.asc
+Version  : 4.44.0
+Release  : 63
+URL      : https://tarballs.openstack.org/oslo.db/oslo.db-4.44.0.tar.gz
+Source0  : https://tarballs.openstack.org/oslo.db/oslo.db-4.44.0.tar.gz
+Source99 : https://tarballs.openstack.org/oslo.db/oslo.db-4.44.0.tar.gz.asc
 Summary  : Oslo Database library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -74,7 +74,7 @@ python3 components for the oslo.db package.
 
 
 %prep
-%setup -q -n oslo.db-4.43.0
+%setup -q -n oslo.db-4.44.0
 %patch1 -p1
 
 %build
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546552230
+export SOURCE_DATE_EPOCH=1550179612
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

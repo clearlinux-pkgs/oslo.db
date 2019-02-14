@@ -1,10 +1,18 @@
 CHANGES
 =======
 
+4.44.0
+------
+
+* exc\_filters: fix deadlock detection for MariaDB/Galera cluster
+* Resolve SAWarning in Query.soft\_delete()
+* Update hacking version
+
 4.43.0
 ------
 
 * Remove convert\_unicode flag
+* Use template for lower-constraints
 * Update mailinglist from dev to discuss
 
 4.42.0
