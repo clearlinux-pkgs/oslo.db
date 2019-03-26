@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+4.45.0
+------
+
+* Bump psycopg lower-constraint to 2.7
+
 4.44.0
 ------
 
