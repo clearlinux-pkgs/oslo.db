@@ -1,5 +1,5 @@
 PKG_NAME := oslo.db
-URL = https://tarballs.openstack.org/oslo.db/oslo.db-4.45.0.tar.gz
+URL = https://tarballs.openstack.org/oslo.db/oslo.db-4.46.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
