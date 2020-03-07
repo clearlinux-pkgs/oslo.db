@@ -6,10 +6,10 @@
 #
 Name     : oslo.db
 Version  : 4.46.0
-Release  : 68
+Release  : 69
 URL      : https://tarballs.openstack.org/oslo.db/oslo.db-4.46.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.db/oslo.db-4.46.0.tar.gz
-Source99 : https://tarballs.openstack.org/oslo.db/oslo.db-4.46.0.tar.gz.asc
+Source1  : https://tarballs.openstack.org/oslo.db/oslo.db-4.46.0.tar.gz.asc
 Summary  : Oslo Database library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -30,16 +30,26 @@ Requires: sqlalchemy-migrate
 Requires: stevedore
 Requires: testresources
 Requires: testscenarios
+BuildRequires : PyMySQL
+BuildRequires : SQLAlchemy
+BuildRequires : alembic
 BuildRequires : buildreq-distutils3
+BuildRequires : debtcollector
+BuildRequires : oslo.config
+BuildRequires : oslo.i18n
+BuildRequires : oslo.utils
 BuildRequires : pbr
+BuildRequires : psycopg2
+BuildRequires : six
+BuildRequires : sqlalchemy-migrate
+BuildRequires : stevedore
+BuildRequires : testresources
+BuildRequires : testscenarios
 Patch1: 0001-Modify-min_pool_size-default-value.patch
 
 %description
-========================
 Team and repository tags
-========================
-.. image:: https://governance.openstack.org/tc/badges/oslo.db.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
+        ========================
 
 %package license
 Summary: license components for the oslo.db package.
@@ -62,6 +72,18 @@ python components for the oslo.db package.
 Summary: python3 components for the oslo.db package.
 Group: Default
 Requires: python3-core
+Provides: pypi(oslo.db)
+Requires: pypi(alembic)
+Requires: pypi(debtcollector)
+Requires: pypi(oslo.config)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(sqlalchemy)
+Requires: pypi(sqlalchemy_migrate)
+Requires: pypi(stevedore)
+Requires: pypi(testresources)
+Requires: pypi(testscenarios)
 
 %description python3
 python3 components for the oslo.db package.
@@ -69,14 +91,20 @@ python3 components for the oslo.db package.
 
 %prep
 %setup -q -n oslo.db-4.46.0
+cd %{_builddir}/oslo.db-4.46.0
 %patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1556332053
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1583539489
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -84,7 +112,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.db
-cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.db/LICENSE
+cp %{_builddir}/oslo.db-4.46.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.db/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -95,7 +123,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/oslo.db/LICENSE
+/usr/share/package-licenses/oslo.db/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 
 %files python
 %defattr(-,root,root,-)
