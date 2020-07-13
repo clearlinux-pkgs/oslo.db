@@ -1,12 +1,7 @@
 # This file contains recursive sources that require this package
-barbican
 cinder
-glance
-heat
 ironic
 keystone
 neutron
 neutron-lib
-nova
-sahara
 subunit2sql
